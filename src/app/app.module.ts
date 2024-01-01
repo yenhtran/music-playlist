@@ -12,9 +12,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { TracksComponent } from './tracks/tracks.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TracksComponent, FavoritesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
