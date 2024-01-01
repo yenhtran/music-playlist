@@ -1,0 +1,9 @@
+.main-toolbar {
+  justify-content: center !important;
+  font-size: 40px !important;
+  background-color: #8576a9 !important;
+  font-family: "Victor Mono", monospace !important;
+  color: white !important;
+  top: 0;
+  z-index: 1;
+}
