@@ -16,7 +16,17 @@ export class MusicService {
   state = MusicPlayerState;
   audio = new Audio();
 
-  constructor() {}
+  constructor() {
+    this.audio.ontimeupdate = () => {
+      this.state.currentTime = this.audio.currentTime;
+    };
+    this.audio.oncanplay = () => {
+      this.state.duration = this.audio.duration;
+    };
+    this.audio.onratechange = () => {
+      this.state.playbackRate = this.audio.playbackRate;
+    };
+  }
 
   resume() {
     this.audio.play();
