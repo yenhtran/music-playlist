@@ -3,3 +3,22 @@
     Favorites
   </button>
 </mat-toolbar>
+
+<mat-list class="track-list">
+  <mat-list-item *ngFor="let file of tracks; let i = index">
+    <img matListItemIcon class="track-photo" [src]="file.img" />
+    <h2 matListItemTitle class="track-name" (click)="playTrack(file)">
+      {{ file.name }}
+    </h2>
+    <h6 matListItemLine class="artist-name" (click)="playTrack(file)">
+      by {{ file.artist }}
+    </h6>
+    <mat-icon
+      matListItemIcon
+      class="active-track"
+      *ngIf="tracks.indexOf(this.state.activeTrack) === i"
+      fontIcon="headphones"
+    ></mat-icon>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>
