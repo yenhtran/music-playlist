@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MusicPlayerState } from '../helpers/music-player-state';
 
-interface TrackMetaData {
+export interface TrackMetaData {
   url: string;
   name: string;
   artist: string;
