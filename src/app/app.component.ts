@@ -1,10 +1,26 @@
 import { Component } from '@angular/core';
+import { MusicPlayerState } from './helpers/music-player-state';
+import { tracks } from './helpers/tracks';
+import { MusicService } from './services/music.service';
+import moment from 'moment';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'music-playlist';
+  state = MusicPlayerState;
+  readonly tracks = tracks;
+
+  constructor(public musicService: MusicService) {}
+
+  goToTime(change: any) {
+    this.musicService.goToTime(change.target.value);
+  }
+
+  getFormattedTime(timeInSeconds: number) {
+    return moment.utc(timeInSeconds * 1000).format('mm:ss');
+  }
 }

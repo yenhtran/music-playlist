@@ -2,3 +2,28 @@
   <span>Dad's Music Player</span>
 </mat-toolbar>
 <router-outlet></router-outlet>
+
+<div class="progress-container">
+  <mat-toolbar class="progress-bar">
+    <mat-toolbar-row
+      *ngIf="tracks.indexOf(this.state.activeTrack) !== -1"
+      class="progress-artist-container"
+    >
+      <div>{{ state.activeTrack.name }} By {{ state.activeTrack.artist }}</div>
+      <div>
+        {{ getFormattedTime(state.currentTime) }} /
+        {{ getFormattedTime(state.duration) }}
+      </div>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="progress-bar">
+      <mat-slider
+        min="0"
+        [max]="state.duration"
+        step="1"
+        (input)="goToTime($event)"
+      >
+        <input matSliderThumb [value]="state.currentTime" #slider />
+      </mat-slider>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
