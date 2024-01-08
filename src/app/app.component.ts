@@ -23,4 +23,14 @@ export class AppComponent {
   getFormattedTime(timeInSeconds: number) {
     return moment.utc(timeInSeconds * 1000).format('mm:ss');
   }
+
+  pause() {
+    console.log('state: ', this.state);
+    this.musicService.pause();
+  }
+
+  resume() {
+    console.log('state: ', this.state);
+    this.musicService.resume();
+  }
 }

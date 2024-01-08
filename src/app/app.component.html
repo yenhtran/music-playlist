@@ -25,5 +25,27 @@
         <input matSliderThumb [value]="state.currentTime" #slider />
       </mat-slider>
     </mat-toolbar-row>
+    <mat-toolbar-row class="progress-container-action-bar">
+      <div>
+        <button
+          mat-button
+          (click)="resume()"
+          *ngIf="!state?.isPlaying"
+          matTooltip="Play"
+          [disabled]="tracks.indexOf(this.state.activeTrack) === -1"
+        >
+          <mat-icon>play_arrow</mat-icon>
+        </button>
+        <button
+          mat-button
+          (click)="pause()"
+          *ngIf="state?.isPlaying"
+          matTooltip="Pause"
+          [disabled]="tracks.indexOf(this.state.activeTrack) === -1"
+        >
+          <mat-icon>pause</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
   </mat-toolbar>
 </div>

@@ -23,6 +23,7 @@
   font-family: "Victor Mono", monospace;
   height: 1px;
   background-color: #8576a9;
+  padding-top: 10px;
 }
 
 .mat-mdc-slider {
@@ -35,7 +36,6 @@
 }
 
 .progress-artist-container {
-  font-family: "Victor Mono", monospace;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -51,8 +51,4 @@
   margin: auto;
   color: white;
   margin: auto;
-}
-
-.mat-toolbar-row {
-  padding-bottom: 50px;
 }
