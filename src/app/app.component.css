@@ -7,3 +7,52 @@
   top: 0;
   z-index: 1;
 }
+
+.progress-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 20px;
+  justify-content: center !important;
+}
+
+.progress-bar {
+  width: 100%;
+  justify-content: center !important;
+  font-family: "Victor Mono", monospace;
+  height: 1px;
+  background-color: #8576a9;
+}
+
+.mat-mdc-slider {
+  max-width: 300px;
+  width: 100%;
+}
+
+.mat-mdc-card + .mat-mdc-card {
+  margin-top: 8px;
+}
+
+.progress-artist-container {
+  font-family: "Victor Mono", monospace;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 15px;
+  width: 60%;
+  margin: auto;
+}
+
+.progress-container-action-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 63%;
+  margin: auto;
+  color: white;
+  margin: auto;
+}
+
+.mat-toolbar-row {
+  padding-bottom: 50px;
+}
