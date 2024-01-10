@@ -33,4 +33,20 @@ export class AppComponent {
     console.log('state: ', this.state);
     this.musicService.resume();
   }
+
+  next() {
+    const index = tracks.indexOf(this.state.activeTrack) + 1;
+    if (index < tracks.length) {
+      this.state.activeTrack = tracks[index];
+      this.musicService.playNewFile(tracks[index]);
+    }
+  }
+
+  previous() {
+    const index = tracks.indexOf(this.state.activeTrack) - 1;
+    if (index >= 0) {
+      this.state.activeTrack = tracks[index];
+      this.musicService.playNewFile(tracks[index]);
+    }
+  }
 }

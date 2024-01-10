@@ -29,6 +29,17 @@
       <div>
         <button
           mat-button
+          [disabled]="
+            tracks.indexOf(this.state.activeTrack) === 0 ||
+            tracks.indexOf(this.state.activeTrack) === -1
+          "
+          (click)="previous()"
+          matTooltip="Previous Track"
+        >
+          <mat-icon>skip_previous</mat-icon>
+        </button>
+        <button
+          mat-button
           (click)="resume()"
           *ngIf="!state?.isPlaying"
           matTooltip="Play"
@@ -44,6 +55,17 @@
           [disabled]="tracks.indexOf(this.state.activeTrack) === -1"
         >
           <mat-icon>pause</mat-icon>
+        </button>
+        <button
+          mat-button
+          [disabled]="
+            tracks.indexOf(this.state.activeTrack) === tracks.length - 1 ||
+            tracks.indexOf(this.state.activeTrack) === -1
+          "
+          (click)="next()"
+          matTooltip="Next Track"
+        >
+          <mat-icon>skip_next</mat-icon>
         </button>
       </div>
     </mat-toolbar-row>
