@@ -52,3 +52,26 @@
   color: white;
   margin: auto;
 }
+
+@media screen and (max-width: 807px) {
+  .progress-artist-container {
+    max-height: 300px;
+  }
+
+  .progress-container {
+    height: 150px;
+    margin-bottom: 0px;
+  }
+
+  .progress-artist-container {
+    flex-direction: column;
+  }
+
+  .progress-container-action-bar {
+    flex-direction: column;
+  }
+
+  .progress-bar {
+    padding: 8px;
+  }
+}
