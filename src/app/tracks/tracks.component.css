@@ -46,7 +46,8 @@
 }
 
 .active-track {
-  order: 2
+  order: 2;
+  color: white !important;
 }
 
 @media screen and (max-width: 807px) {

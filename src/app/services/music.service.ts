@@ -45,7 +45,7 @@ export class MusicService {
 
   changePlaybackSpeed(speed: number) {
     this.audio.playbackRate = speed;
-    // this.state.playbackRate = this.audio.playbackRate;
+    this.state.playbackRate = this.audio.playbackRate;
   }
 
   playNewFile(file: TrackMetaData) {

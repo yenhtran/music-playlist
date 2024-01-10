@@ -13,6 +13,7 @@ export class AppComponent {
   title = 'music-playlist';
   state = MusicPlayerState;
   readonly tracks = tracks;
+  playbackSpeeds = [1, 2, 3, 4, 5];
 
   constructor(public musicService: MusicService) {}
 
@@ -48,5 +49,9 @@ export class AppComponent {
       this.state.activeTrack = tracks[index];
       this.musicService.playNewFile(tracks[index]);
     }
+  }
+
+  changePlaybackSpeed(speed: number) {
+    this.musicService.changePlaybackSpeed(speed);
   }
 }

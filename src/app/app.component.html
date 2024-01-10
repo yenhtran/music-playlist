@@ -68,6 +68,32 @@
           <mat-icon>skip_next</mat-icon>
         </button>
       </div>
+      <div>
+        <button
+          mat-button
+          [matMenuTriggerFor]="menu"
+          matTooltip="Playback Speed"
+        >
+          <mat-icon>play_circle_filled</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button
+            mat-menu-item
+            *ngFor="let speed of playbackSpeeds"
+            (click)="changePlaybackSpeed(speed)"
+          >
+            {{ speed }}x
+          </button>
+        </mat-menu>
+        <button
+          mat-button
+          (click)="musicService.playNewFile(state.activeTrack)"
+          matTooltip="Replay Track"
+          [disabled]="tracks.indexOf(this.state.activeTrack) === -1"
+        >
+          <mat-icon>replay</mat-icon>
+        </button>
+      </div>
     </mat-toolbar-row>
   </mat-toolbar>
 </div>
