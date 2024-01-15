@@ -19,4 +19,9 @@ export class TracksComponent implements OnInit {
   playTrack(file: TrackMetaData) {
     this.musicService.playNewFile(file);
   }
+
+  handleFavorites(addOrRemoveCheck: boolean, index: number) {
+    const isFavorite = addOrRemoveCheck === true ? true : false;
+    tracks[index].isFavorite = isFavorite;
+  }
 }

@@ -19,6 +19,20 @@
       *ngIf="tracks.indexOf(this.state.activeTrack) === i"
       fontIcon="headphones"
     ></mat-icon>
+    <mat-icon
+      matListItemIcon
+      *ngIf="file.isFavorite === true"
+      class="favorite-icon"
+      (click)="handleFavorites(false, i)"
+      >favorite</mat-icon
+    >
+    <mat-icon
+      matListItemIcon
+      *ngIf="file.isFavorite === false"
+      class="favorite-border-icon"
+      (click)="handleFavorites(true, i)"
+      >favorite_border</mat-icon
+    >
     <mat-divider></mat-divider>
   </mat-list-item>
 </mat-list>

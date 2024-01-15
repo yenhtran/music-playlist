@@ -50,6 +50,18 @@
   color: white !important;
 }
 
+.favorite-icon {
+  order: 2;
+  color: #891b1b !important;
+  font-size: 25px;
+}
+
+.favorite-border-icon {
+  order: 2;
+  color: white;
+  font-size: 25px;
+}
+
 @media screen and (max-width: 807px) {
   .track-list {
     max-height: 300px;
