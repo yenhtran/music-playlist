@@ -1,13 +1,6 @@
 import { Injectable } from '@angular/core';
 import { MusicPlayerState } from '../helpers/music-player-state';
-
-export interface TrackMetaData {
-  url: string;
-  name: string;
-  artist: string;
-  img: string;
-  isFavorite: boolean;
-}
+import { TrackMetaData } from '../helpers/tracks';
 
 @Injectable({
   providedIn: 'root',

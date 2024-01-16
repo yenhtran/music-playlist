@@ -11,3 +11,17 @@ export const MusicPlayerState = {
     isFavorite: false,
   },
 };
+
+export interface MusicPlayerState {
+  duration: number;
+  currentTime: number;
+  isPlaying: boolean;
+  playbackRate: number;
+  activeTrack: {
+    url: string;
+    name: string;
+    artist: string;
+    img: string;
+    isFavorite: boolean;
+  };
+}

@@ -70,3 +70,12 @@ export const tracks = [
     isFavorite: false,
   },
 ];
+
+export interface TrackMetaData {
+  url: string;
+  name: string;
+  artist: string;
+  img: string;
+  isFavorite: boolean;
+}
+

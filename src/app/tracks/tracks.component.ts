@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { tracks } from '../helpers/tracks';
 import { MusicPlayerState } from '../helpers/music-player-state';
-import { MusicService, TrackMetaData } from '../services/music.service';
+import { MusicService } from '../services/music.service';
+import { TrackMetaData } from '../helpers/tracks';
 
 @Component({
   selector: 'app-tracks',
