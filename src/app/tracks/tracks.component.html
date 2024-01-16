@@ -21,6 +21,7 @@
     ></mat-icon>
     <mat-icon
       matListItemIcon
+      matTooltip="Remove from favorite Track"
       *ngIf="file.isFavorite === true"
       class="favorite-icon"
       (click)="handleFavorites(false, i)"
@@ -28,6 +29,7 @@
     >
     <mat-icon
       matListItemIcon
+      matTooltip="Add to favorite Tracks"
       *ngIf="file.isFavorite === false"
       class="favorite-border-icon"
       (click)="handleFavorites(true, i)"
